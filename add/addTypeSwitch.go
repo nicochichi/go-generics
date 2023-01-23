@@ -6,7 +6,6 @@ func addTypeSwitch(a, b interface{}) (bool, interface{}) {
 		if bi, ok := b.(int); ok {
 			return true, a.(int) + bi
 		}
-
 	case float64:
 		if bi, ok := b.(float64); ok {
 			return true, a.(float64) + bi

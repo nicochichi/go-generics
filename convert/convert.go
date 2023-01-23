@@ -2,13 +2,11 @@ package convert
 
 import (
 	"strconv"
-
-	"nicochichi/generics/domain"
 )
 
 type (
 	IDs interface {
-		uint64 | int64 | domain.CustomerID | domain.ShipmentID
+		~uint64
 	}
 )
 

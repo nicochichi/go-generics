@@ -1,6 +1,8 @@
 package max
 
-func maxGenerics[T int | float64 | string](a, b T) T {
+import "golang.org/x/exp/constraints"
+
+func maxGenerics[T int | float64 | string | constraints.Ordered](a, b T) T {
 	if a > b {
 		return a
 	}
