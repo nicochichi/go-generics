@@ -7,3 +7,5 @@ func Keys[K comparable, V any](m map[K]V) []K {
 	}
 	return keys
 }
+
+type CustomMap[T comparable, V int | string] map[T]V
