@@ -14,7 +14,7 @@ func main() {
 	fmt.Println("Valor uint64 convertido a string: ", convert.ToString(uint64(234)))
 
 	// Podemos remover el tipo shipmentID cuando llamamos a la funcion porque el compilador puede inferir el tipo segun el parametro.
-	fmt.Println("Valor ShipmentID convertido a string: ", convert.ToString[domain.ShipmentID](domain.ShipmentID(234)))
+	fmt.Println("Valor ShipmentID convertido a string: ", convert.ToString(domain.ShipmentID(234)))
 
 	// Print  de todos los keys del map.
 	m := map[string]int64{"foo": 1, "bar": 2, "test": 3, "anotherValue": 4}
@@ -48,6 +48,7 @@ func main() {
 
 	fmt.Println("custom map: ", newMap)
 	fmt.Println("Keys del custom map: ", collections.Keys(newMap))
+	fmt.Println("Keys del custom map: ", newMap.Keys())
 
 	// Implementacion de una linked list
 	list := collections.List[int]{}
